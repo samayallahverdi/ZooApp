@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ki-qy-Jxp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ck8-7n-jrh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready travel to the animal world?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIU-Sf-JDR">
-                                <rect key="frame" x="68" y="414" width="257" height="47"/>
+                                <rect key="frame" x="68" y="370" width="257" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="EaN-qK-qua"/>
                                     <constraint firstAttribute="width" constant="257" id="m57-P4-ODt"/>
@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwy-TZ-PA0">
-                                <rect key="frame" x="51.666666666666657" y="571" width="290" height="34"/>
+                                <rect key="frame" x="51.666666666666657" y="527" width="290" height="34"/>
                                 <color key="backgroundColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANIMALS KINGDOM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgu-fa-Ahw">
-                                <rect key="frame" x="33" y="277" width="327" height="137"/>
+                                <rect key="frame" x="33" y="233" width="327" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="327" id="7Mp-YR-oge"/>
                                     <constraint firstAttribute="height" constant="137" id="h4p-iC-45M"/>
@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1907.6335877862596" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="4066" y="-42"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="lTM-U0-HTA">
@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8j-ge-Kdn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657.2519083969464" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="2408" y="-41"/>
         </scene>
         <!--Register Controller-->
         <scene sceneID="OUS-h9-beT">
@@ -298,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RC8-8K-cNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3457.2519083969464" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="3208" y="-42"/>
         </scene>
         <!--Zoo List Controller-->
         <scene sceneID="zgl-LS-tgr">
@@ -390,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxF-lB-JdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6464.8854961832058" y="-761.26760563380287"/>
+            <point key="canvasLocation" x="6065" y="-770"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Iyr-WJ-pQu">
@@ -406,7 +406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6R-D5-ICE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6468" y="698"/>
+            <point key="canvasLocation" x="6068" y="689"/>
         </scene>
         <!--Animals Category Controller-->
         <scene sceneID="2uA-e2-6iS">
@@ -422,25 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFA-mU-BGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6469" y="-41"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Hqf-Ay-Non">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9ki-qy-Jxp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1A9-2c-yoZ">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KEv-hG-1bk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l7A-cG-p58" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="980.91603053435108" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="6995" y="-51"/>
         </scene>
         <!--Animals Category-->
         <scene sceneID="86a-uZ-USh">
@@ -459,7 +441,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbm-7y-NX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5541" y="-41"/>
+            <point key="canvasLocation" x="6066" y="-51"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="stE-V6-uSE">
@@ -478,7 +460,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FpP-PM-uYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4489" y="-42"/>
+            <point key="canvasLocation" x="5015" y="-51"/>
         </scene>
         <!--Zoo Info-->
         <scene sceneID="w2g-Yq-weY">
@@ -497,7 +479,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EU-JY-Hq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5540" y="698"/>
+            <point key="canvasLocation" x="5140" y="689"/>
         </scene>
         <!--Zoo List-->
         <scene sceneID="F8X-h5-b9G">
@@ -516,7 +498,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqg-b3-qQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5540" y="-761"/>
+            <point key="canvasLocation" x="5140" y="-770"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kXK-7z-pZ6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ck8-7n-jrh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fJc-Cd-G8n">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J2q-Wh-G6Q" kind="relationship" relationship="rootViewController" id="57L-CP-YhE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEx-Gr-SfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="-41"/>
         </scene>
     </scenes>
     <resources>

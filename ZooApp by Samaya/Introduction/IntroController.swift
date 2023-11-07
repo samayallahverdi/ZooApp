@@ -17,7 +17,7 @@ class IntroController: UIViewController {
     
     @IBAction func getStartButtonClicked(_ sender: Any) {
         
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+        let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
         navigationController?.show(controller, sender: nil)
         
     }

@@ -37,7 +37,7 @@ class LoginController: UIViewController {
             
             UserDefaults.standard.setValue(true, forKey: "isLogged")
             
-            let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+            let controller = storyboard?.instantiateViewController(withIdentifier: "IntroController") as! IntroController
             navigationController?.show(controller, sender: nil)
         } else {
             showLoginAlert(message: "Invalid credentials")
