@@ -27,6 +27,9 @@
 		25EE260D2AF7CD6600139C6E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EE260C2AF7CD6600139C6E /* Model.swift */; };
 		25EE260F2AF7CD7200139C6E /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EE260E2AF7CD7200139C6E /* DataBase.swift */; };
 		25EE26132AF802D900139C6E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EE26122AF802D800139C6E /* LoginController.swift */; };
+		25F44BF52AFB9F4300A9078A /* AnimalsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F44BF32AFB9F4300A9078A /* AnimalsListCell.swift */; };
+		25F44BF62AFB9F4300A9078A /* AnimalsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F44BF42AFB9F4300A9078A /* AnimalsListCell.xib */; };
+		25F44BF92AFBC1E600A9078A /* ZooInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F44BF82AFBC1E600A9078A /* ZooInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		25EE260C2AF7CD6600139C6E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		25EE260E2AF7CD7200139C6E /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		25EE26122AF802D800139C6E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		25F44BF32AFB9F4300A9078A /* AnimalsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListCell.swift; sourceTree = "<group>"; };
+		25F44BF42AFB9F4300A9078A /* AnimalsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalsListCell.xib; sourceTree = "<group>"; };
+		25F44BF82AFBC1E600A9078A /* ZooInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,8 @@
 				25EE25FA2AF7C8BB00139C6E /* LaunchScreen.storyboard */,
 				25EE25FD2AF7C8BB00139C6E /* Info.plist */,
 				25EE25F52AF7C8B700139C6E /* ZooApp_by_Samaya.xcdatamodeld */,
+				25F44BF72AFB9F4A00A9078A /* AnimalsList */,
+				25F44BFA2AFBC1EF00A9078A /* ZooInfo */,
 			);
 			path = "ZooApp by Samaya";
 			sourceTree = "<group>";
@@ -177,6 +185,23 @@
 				25EE260A2AF7CA4200139C6E /* IntroController.swift */,
 			);
 			path = Introduction;
+			sourceTree = "<group>";
+		};
+		25F44BF72AFB9F4A00A9078A /* AnimalsList */ = {
+			isa = PBXGroup;
+			children = (
+				25F44BF32AFB9F4300A9078A /* AnimalsListCell.swift */,
+				25F44BF42AFB9F4300A9078A /* AnimalsListCell.xib */,
+			);
+			path = AnimalsList;
+			sourceTree = "<group>";
+		};
+		25F44BFA2AFBC1EF00A9078A /* ZooInfo */ = {
+			isa = PBXGroup;
+			children = (
+				25F44BF82AFBC1E600A9078A /* ZooInfoController.swift */,
+			);
+			path = ZooInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2563B1ED2AFA7B68006BEAE5 /* ZooListCell.xib in Resources */,
+				25F44BF62AFB9F4300A9078A /* AnimalsListCell.xib in Resources */,
 				25EE25FC2AF7C8BB00139C6E /* LaunchScreen.storyboard in Resources */,
 				2563B1F42AFA7CE3006BEAE5 /* AnimalCategoryCell.xib in Resources */,
 				25EE25F92AF7C8BB00139C6E /* Assets.xcassets in Resources */,
@@ -267,7 +293,9 @@
 				2563B1E72AFA4AB8006BEAE5 /* ZooListController.swift in Sources */,
 				2563B1F72AFA80E0006BEAE5 /* AnimalsCategoryController.swift in Sources */,
 				25EE25EF2AF7C8B700139C6E /* SceneDelegate.swift in Sources */,
+				25F44BF92AFBC1E600A9078A /* ZooInfoController.swift in Sources */,
 				2563B1F32AFA7CE3006BEAE5 /* AnimalCategoryCell.swift in Sources */,
+				25F44BF52AFB9F4300A9078A /* AnimalsListCell.swift in Sources */,
 				2563B1E32AFA385A006BEAE5 /* RegisterController.swift in Sources */,
 				25EE260F2AF7CD7200139C6E /* DataBase.swift in Sources */,
 				25EE25F72AF7C8B700139C6E /* ZooApp_by_Samaya.xcdatamodeld in Sources */,

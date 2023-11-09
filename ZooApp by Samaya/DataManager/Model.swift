@@ -38,3 +38,9 @@ class Category: Object {
     @Persisted var animalsInfo: String?
     @Persisted var categoryInfo: String?
 }
+
+class MyFavorites: Object {
+    @Persisted var zoo: String?
+    @Persisted var animals: String?
+}
+
