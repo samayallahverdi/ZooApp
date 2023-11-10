@@ -21,7 +21,7 @@ class ZooListController: UIViewController {
     var zooImage = [ZooInfo]()
     var zoo = [ZooInfo]()
     var zooEmpty: [ZooInfo] = []
-    var isGrid = true
+    var isGrid = false
     
     
     override func viewDidLoad() {

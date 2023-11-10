@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if (UserDefaults.standard.bool(forKey: "isLogged")) {
             window = UIWindow(windowScene: windowScene)
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IntroController") as! IntroController
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
             
 
             window?.rootViewController = UINavigationController(rootViewController: controller)

@@ -16,25 +16,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="330" height="220"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DetroitZoo" translatesAutoresizingMaskIntoConstraints="NO" id="IQu-Hy-xbt">
-                        <rect key="frame" x="13" y="8" width="305" height="173"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DetroitZoo" translatesAutoresizingMaskIntoConstraints="NO" id="IQu-Hy-xbt">
+                        <rect key="frame" x="19" y="5" width="292" height="175"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <integer key="value" value="15"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detorit Zoo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxh-u0-TBj">
-                        <rect key="frame" x="13" y="189" width="216" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detorit Zoo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxh-u0-TBj">
+                        <rect key="frame" x="16" y="191" width="99" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQK-6d-RjB">
-                        <rect key="frame" x="277" y="187" width="48" height="28"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQK-6d-RjB">
+                        <rect key="frame" x="284" y="185" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="K5P-6h-RDH"/>
+                            <constraint firstAttribute="width" constant="30" id="xK7-mV-Lif"/>
+                        </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
                             <color key="baseForegroundColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,6 +48,16 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fQK-6d-RjB" firstAttribute="top" secondItem="IQu-Hy-xbt" secondAttribute="bottom" constant="5" id="1FY-zV-PSx"/>
+                <constraint firstItem="Hxh-u0-TBj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="8I3-Sy-RM7"/>
+                <constraint firstAttribute="trailing" secondItem="fQK-6d-RjB" secondAttribute="trailing" constant="16" id="8qD-Do-Y2c"/>
+                <constraint firstAttribute="bottom" secondItem="fQK-6d-RjB" secondAttribute="bottom" constant="5" id="U0t-iA-jeb"/>
+                <constraint firstAttribute="bottom" secondItem="Hxh-u0-TBj" secondAttribute="bottom" constant="5" id="Ze3-j7-iA0"/>
+                <constraint firstItem="IQu-Hy-xbt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="19" id="alc-nq-bjs"/>
+                <constraint firstAttribute="trailing" secondItem="IQu-Hy-xbt" secondAttribute="trailing" constant="19" id="gjo-Wo-GR5"/>
+                <constraint firstItem="IQu-Hy-xbt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="zYS-Gp-T2v"/>
+            </constraints>
             <size key="customSize" width="333" height="218"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
