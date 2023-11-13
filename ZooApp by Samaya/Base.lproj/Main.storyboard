@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8j-ge-Kdn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4143" y="-51"/>
+            <point key="canvasLocation" x="4142.7480916030536" y="-51.408450704225352"/>
         </scene>
         <!--Register Controller-->
         <scene sceneID="OUS-h9-beT">
@@ -402,31 +402,156 @@
                     <view key="view" contentMode="scaleToFill" id="UF9-Jz-ulW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkC-YW-xA6">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="183"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seach..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTG-QS-wCR">
+                                        <rect key="frame" x="31" y="136" width="330" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="searchButton:" destination="cbq-TJ-XYO" eventType="editingChanged" id="U97-b0-MZy"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="XTG-QS-wCR" firstAttribute="leading" secondItem="rkC-YW-xA6" secondAttribute="leading" constant="31" id="IMp-42-oQF"/>
+                                    <constraint firstAttribute="height" constant="183" id="RpD-3a-iHN"/>
+                                    <constraint firstAttribute="trailing" secondItem="XTG-QS-wCR" secondAttribute="trailing" constant="32" id="drO-PA-jOB"/>
+                                    <constraint firstAttribute="width" constant="393" id="pDC-Na-SQY"/>
+                                    <constraint firstItem="XTG-QS-wCR" firstAttribute="top" secondItem="rkC-YW-xA6" secondAttribute="top" constant="136" id="pe4-k6-D65"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BVj-BN-zpk">
+                                <rect key="frame" x="0.0" y="193" width="393" height="576"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="MBB-75-wTg">
+                                    <size key="itemSize" width="330" height="220"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cbq-TJ-XYO" id="3Gf-Bb-Eq7"/>
+                                    <outlet property="delegate" destination="cbq-TJ-XYO" id="SBb-FC-div"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hfg-uV-iE9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="rkC-YW-xA6" firstAttribute="top" secondItem="UF9-Jz-ulW" secondAttribute="top" id="0PV-fA-ZuD"/>
+                            <constraint firstItem="rkC-YW-xA6" firstAttribute="trailing" secondItem="hfg-uV-iE9" secondAttribute="trailing" id="B0E-Sp-91e"/>
+                            <constraint firstItem="BVj-BN-zpk" firstAttribute="trailing" secondItem="hfg-uV-iE9" secondAttribute="trailing" id="LCc-Jz-AUx"/>
+                            <constraint firstItem="BVj-BN-zpk" firstAttribute="top" secondItem="rkC-YW-xA6" secondAttribute="bottom" constant="10" id="SAw-yS-fgY"/>
+                            <constraint firstItem="BVj-BN-zpk" firstAttribute="leading" secondItem="hfg-uV-iE9" secondAttribute="leading" id="j1d-aD-6hF"/>
+                            <constraint firstItem="rkC-YW-xA6" firstAttribute="leading" secondItem="hfg-uV-iE9" secondAttribute="leading" id="knb-bN-v8l"/>
+                            <constraint firstItem="BVj-BN-zpk" firstAttribute="bottom" secondItem="hfg-uV-iE9" secondAttribute="bottom" id="u84-A4-qTy"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3qc-Pl-mS4"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="rkC-YW-xA6" id="uh3-vw-qVd"/>
+                        <outlet property="searchTextField" destination="XTG-QS-wCR" id="CiS-DZ-Bob"/>
+                        <outlet property="zooInfoCollection" destination="BVj-BN-zpk" id="fNh-7a-H6Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDY-9J-bNC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7915" y="708"/>
+            <point key="canvasLocation" x="6951.9083969465646" y="719.71830985915494"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Iyr-WJ-pQu">
+        <!--Zoo Details Controller-->
+        <scene sceneID="Qkw-T8-2Qz">
             <objects>
-                <viewController id="Fgp-D8-lWi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lwe-C3-ofS">
+                <viewController storyboardIdentifier="ZooDetailsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UVE-gA-aOB" customClass="ZooDetailsController" customModule="ZooApp_by_Samaya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zBr-XQ-teE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ofb-De-xKI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YR-0x-QiP">
+                                <rect key="frame" x="0.0" y="193" width="393" height="625"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGa-8M-xrI">
+                                        <rect key="frame" x="31.666666666666657" y="15" width="330" height="239"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="239" id="cnt-qn-PCZ"/>
+                                            <constraint firstAttribute="width" constant="330" id="ejJ-3r-y6o"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kTZ-ls-xqf">
+                                        <rect key="frame" x="31" y="259" width="331" height="366"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="kTZ-ls-xqf" firstAttribute="leading" secondItem="2YR-0x-QiP" secondAttribute="leading" constant="31" id="7TC-66-sW7"/>
+                                    <constraint firstItem="kTZ-ls-xqf" firstAttribute="top" secondItem="OGa-8M-xrI" secondAttribute="bottom" constant="5" id="NCg-kO-tLZ"/>
+                                    <constraint firstItem="OGa-8M-xrI" firstAttribute="centerX" secondItem="2YR-0x-QiP" secondAttribute="centerX" id="RVM-Wn-cAv"/>
+                                    <constraint firstItem="OGa-8M-xrI" firstAttribute="top" secondItem="2YR-0x-QiP" secondAttribute="top" constant="15" id="imV-NE-G3r"/>
+                                    <constraint firstAttribute="trailing" secondItem="kTZ-ls-xqf" secondAttribute="trailing" constant="31" id="jKJ-4R-eol"/>
+                                    <constraint firstAttribute="bottom" secondItem="kTZ-ls-xqf" secondAttribute="bottom" id="pma-23-bwC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7J-cW-vXb">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="183"/>
+                                <color key="backgroundColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="POS-a0-TKa"/>
+                                    <constraint firstAttribute="width" constant="393" id="TwG-W9-1Cb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fMp-t3-7XQ"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="O7J-cW-vXb" firstAttribute="leading" secondItem="fMp-t3-7XQ" secondAttribute="leading" id="0xY-2D-4An"/>
+                            <constraint firstItem="2YR-0x-QiP" firstAttribute="leading" secondItem="fMp-t3-7XQ" secondAttribute="leading" id="2Sf-Ni-EWL"/>
+                            <constraint firstItem="O7J-cW-vXb" firstAttribute="top" secondItem="zBr-XQ-teE" secondAttribute="top" id="GSo-A1-wEu"/>
+                            <constraint firstItem="2YR-0x-QiP" firstAttribute="bottom" secondItem="fMp-t3-7XQ" secondAttribute="bottom" id="L7B-n5-2aL"/>
+                            <constraint firstItem="2YR-0x-QiP" firstAttribute="top" secondItem="O7J-cW-vXb" secondAttribute="bottom" constant="10" id="aPv-EO-2KF"/>
+                            <constraint firstItem="2YR-0x-QiP" firstAttribute="trailing" secondItem="fMp-t3-7XQ" secondAttribute="trailing" id="glL-ix-XZ4"/>
+                            <constraint firstItem="O7J-cW-vXb" firstAttribute="trailing" secondItem="fMp-t3-7XQ" secondAttribute="trailing" id="xB2-h2-uYI"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rTJ-bA-I5P"/>
+                    <connections>
+                        <outlet property="zooDetails" destination="kTZ-ls-xqf" id="e4v-Cp-FUR"/>
+                        <outlet property="zooImage" destination="OGa-8M-xrI" id="IRC-7k-e87"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6R-D5-ICE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RtE-vw-3mX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6989" y="708"/>
+            <point key="canvasLocation" x="7745.801526717557" y="719.71830985915494"/>
         </scene>
-        <!--Animal Classes-->
+        <!--Animals Category Controller-->
         <scene sceneID="2uA-e2-6iS">
             <objects>
                 <viewController storyboardIdentifier="AnimalsCategoryController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wWV-5L-wiA" customClass="AnimalsCategoryController" customModule="ZooApp_by_Samaya" customModuleProvider="target" sceneMemberID="viewController">
@@ -439,11 +564,11 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwq-Wm-Lyd">
                                         <rect key="frame" x="31.666666666666657" y="136" width="330" height="34"/>
-                                        <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="searchButtonTapped:" destination="wWV-5L-wiA" eventType="editingDidEnd" id="kiD-lh-u0a"/>
+                                            <action selector="searchButtonTapped:" destination="wWV-5L-wiA" eventType="editingChanged" id="XD4-ry-5l7"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -462,7 +587,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L5c-yJ-C2m">
-                                <rect key="frame" x="0.0" y="182" width="393" height="587"/>
+                                <rect key="frame" x="0.0" y="235" width="393" height="534"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="EcT-jN-Hzf">
                                     <size key="itemSize" width="327" height="211"/>
@@ -476,24 +601,32 @@
                                     <outlet property="delegate" destination="wWV-5L-wiA" id="l42-La-JtO"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animlas Classes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chk-bF-a4p">
+                                <rect key="frame" x="90.666666666666686" y="191" width="212" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JiV-lG-zX4"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="L5c-yJ-C2m" firstAttribute="bottom" secondItem="JiV-lG-zX4" secondAttribute="bottom" id="3dv-uI-OOt"/>
                             <constraint firstItem="VT7-LU-lwj" firstAttribute="top" secondItem="SBr-mh-GNY" secondAttribute="top" id="3gC-z5-bCw"/>
+                            <constraint firstItem="chk-bF-a4p" firstAttribute="top" secondItem="VT7-LU-lwj" secondAttribute="bottom" constant="8" id="Ece-7x-wLF"/>
                             <constraint firstItem="VT7-LU-lwj" firstAttribute="trailing" secondItem="JiV-lG-zX4" secondAttribute="trailing" id="F6l-kN-wFz"/>
-                            <constraint firstItem="L5c-yJ-C2m" firstAttribute="leading" secondItem="JiV-lG-zX4" secondAttribute="leading" id="PBX-wo-bgG"/>
-                            <constraint firstItem="L5c-yJ-C2m" firstAttribute="trailing" secondItem="JiV-lG-zX4" secondAttribute="trailing" id="Wrq-Jd-HQT"/>
+                            <constraint firstItem="L5c-yJ-C2m" firstAttribute="leading" secondItem="JiV-lG-zX4" secondAttribute="leading" id="NDS-QU-2xQ"/>
+                            <constraint firstItem="L5c-yJ-C2m" firstAttribute="bottom" secondItem="JiV-lG-zX4" secondAttribute="bottom" id="Rfp-fb-wfb"/>
+                            <constraint firstItem="L5c-yJ-C2m" firstAttribute="trailing" secondItem="JiV-lG-zX4" secondAttribute="trailing" id="UKY-IZ-POF"/>
                             <constraint firstItem="VT7-LU-lwj" firstAttribute="leading" secondItem="JiV-lG-zX4" secondAttribute="leading" id="dTa-Sf-3gi"/>
-                            <constraint firstItem="L5c-yJ-C2m" firstAttribute="top" secondItem="JiV-lG-zX4" secondAttribute="top" constant="79" id="qua-Za-qid"/>
+                            <constraint firstItem="L5c-yJ-C2m" firstAttribute="top" secondItem="chk-bF-a4p" secondAttribute="bottom" constant="8" id="jED-as-qzq"/>
+                            <constraint firstItem="chk-bF-a4p" firstAttribute="centerX" secondItem="SBr-mh-GNY" secondAttribute="centerX" id="vf6-LW-fhC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Animal Classes" id="gCx-dZ-oTc"/>
+                    <navigationItem key="navigationItem" id="gCx-dZ-oTc"/>
                     <connections>
                         <outlet property="backgrounView" destination="VT7-LU-lwj" id="ZOZ-fv-TcX"/>
                         <outlet property="categoryCollection" destination="L5c-yJ-C2m" id="v2q-UF-Rqm"/>
-                        <outlet property="searchField" destination="zwq-Wm-Lyd" id="Oru-x9-5OI"/>
+                        <outlet property="searchField" destination="zwq-Wm-Lyd" id="fir-Oh-tIC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFA-mU-BGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -531,9 +664,6 @@
                                         <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="searchButtonTapped:" destination="wWV-5L-wiA" eventType="editingDidEnd" id="RH3-PL-kDD"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -571,6 +701,21 @@
             </objects>
             <point key="canvasLocation" x="8814.5038167938928" y="-51.408450704225352"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="EFN-tS-tnK">
+            <objects>
+                <viewController id="S9l-BH-yDR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N88-a5-Q1N">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1M5-lS-Iad"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPt-x8-aAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9673" y="-51"/>
+        </scene>
         <!--Animals Category-->
         <scene sceneID="86a-uZ-USh">
             <objects>
@@ -602,31 +747,12 @@
                     <connections>
                         <segue destination="ekE-Nt-GQv" kind="relationship" relationship="viewControllers" id="duf-aj-GR7"/>
                         <segue destination="bf0-ac-0H2" kind="relationship" relationship="viewControllers" id="sjP-u5-ShD"/>
-                        <segue destination="Um0-zl-pse" kind="relationship" relationship="viewControllers" id="dmp-32-anq"/>
+                        <segue destination="Ap0-VO-fo8" kind="relationship" relationship="viewControllers" id="ZNm-pO-ykq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FpP-PM-uYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5941.221374045801" y="-51.408450704225352"/>
-        </scene>
-        <!--Zoo Info-->
-        <scene sceneID="w2g-Yq-weY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Um0-zl-pse" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Zoo Info" image="info" catalog="system" id="KfE-c0-rhb"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cCQ-vv-ta4">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Fgp-D8-lWi" kind="relationship" relationship="rootViewController" id="R6a-VM-E1E"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9EU-JY-Hq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6065" y="708"/>
         </scene>
         <!--Zoo List-->
         <scene sceneID="F8X-h5-b9G">
@@ -665,6 +791,25 @@
             </objects>
             <point key="canvasLocation" x="2320" y="-51"/>
         </scene>
+        <!--Zoo Info-->
+        <scene sceneID="cQa-IC-nvt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ap0-VO-fo8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Zoo Info" image="info" catalog="system" id="BFe-Kz-EHx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pcA-bX-kGW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cbq-TJ-XYO" kind="relationship" relationship="rootViewController" id="Dzb-8z-UYo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kj0-4C-bn4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6025" y="721"/>
+        </scene>
     </scenes>
     <resources>
         <image name="animalsLogo" width="376" height="193"/>
@@ -674,6 +819,9 @@
         <image name="pawprint" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

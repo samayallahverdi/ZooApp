@@ -44,3 +44,4 @@ class MyFavorites: Object {
     @Persisted var animals: String?
 }
 
+

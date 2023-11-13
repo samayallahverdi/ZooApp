@@ -43,6 +43,7 @@ class ZooListController: UIViewController {
         }
         zooListCollection.reloadData()
     }
+    
     @IBAction func changeLayoutButtonClicked(_ sender: Any) {
         
         isGrid.toggle()

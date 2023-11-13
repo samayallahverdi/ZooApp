@@ -40,14 +40,17 @@ class AnimalsCategoryController: UIViewController {
     
     @IBAction func searchButtonTapped(_ sender: Any) {
         let searchText = searchField.text ?? ""
-        if searchText.isEmpty {
-            animalsCategory = category
-        } else {
-            filteredAnimalsCategory = category.filter { $0.categoryName?.localizedCaseInsensitiveContains(searchText) == true }
-            animalsCategory = filteredAnimalsCategory
-        }
-        categoryCollection.reloadData()
-        
+
+            if searchText.isEmpty {
+                animalsCategory = category
+            } else {
+                filteredAnimalsCategory = category.filter { $0.categoryName?.localizedCaseInsensitiveContains(searchText) == true }
+                animalsCategory = filteredAnimalsCategory
+            }
+
+            let uniqueCategories = Set(animalsCategory.compactMap { $0.categoryName })
+           animalOnlyCategory = Array(uniqueCategories)
+            categoryCollection.reloadData()
     }
 }
 

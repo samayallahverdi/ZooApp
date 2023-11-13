@@ -20,8 +20,7 @@ class AnimalCategoryListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(animalsInCategory)
-//       fetchItems()
+      
         CellRegistration()
     }
 }
