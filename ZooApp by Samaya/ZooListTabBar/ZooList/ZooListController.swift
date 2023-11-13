@@ -22,6 +22,7 @@ class ZooListController: UIViewController {
     var zoo = [ZooInfo]()
     var zooEmpty: [ZooInfo] = []
     var isGrid = false
+    var animalsList = [Category]()
     
     
     override func viewDidLoad() {
@@ -68,6 +69,13 @@ extension ZooListController: UICollectionViewDataSource, UICollectionViewDelegat
         cell.delegate = self
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ZooAnimalsListController") as! ZooAnimalsListController
+//        controller.animalsList = animalsList
+        navigationController?.show(controller, sender: nil)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if isGrid {
@@ -85,7 +93,6 @@ extension ZooListController: ZooListCellDelegate {
     
     func didTapSaveButton(index: Int) {
         let selectedZoo = zooImage[index]
-//        let realm = try! Realm()
         
         if let existingFavorite = realm.objects(MyFavorites.self).filter("zoo = %@", selectedZoo.name ?? "").first {
             try! realm.write {

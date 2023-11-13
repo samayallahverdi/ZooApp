@@ -21,7 +21,4 @@ class ZooDetailsController: UIViewController {
         title = zooDetail?.name ?? ""
        
     }
-    
-
-    
 }

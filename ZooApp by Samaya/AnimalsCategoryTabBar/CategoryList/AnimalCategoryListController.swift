@@ -11,7 +11,6 @@ import RealmSwift
 class AnimalCategoryListController: UIViewController {
     
     @IBOutlet weak var backgroundViewColor: UIView!
-    
     @IBOutlet weak var listCollection: UICollectionView!
     
     let realm = try! Realm()
@@ -20,7 +19,7 @@ class AnimalCategoryListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         CellRegistration()
     }
 }
@@ -35,13 +34,16 @@ extension AnimalCategoryListController: UICollectionViewDataSource, UICollection
         cell.animalsListName.text = animalsInCategory[indexPath.item].animalName
         return cell
     }
-    
-}
-
-extension AnimalCategoryListController {
-   
-        func CellRegistration() {
-            listCollection.register(UINib(nibName: "AnimalsCategoryListCell", bundle: nil), forCellWithReuseIdentifier: "AnimalsCategoryListCell")
-        }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "CategoryAnimalsController") as! CategoryAnimalsController
+        controller.animalsInfo = animalsInCategory[indexPath.item]
+        navigationController?.show(controller, sender: nil)
     }
+}
+extension AnimalCategoryListController {
+    
+    func CellRegistration() {
+        listCollection.register(UINib(nibName: "AnimalsCategoryListCell", bundle: nil), forCellWithReuseIdentifier: "AnimalsCategoryListCell")
+    }
+}
 

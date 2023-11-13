@@ -395,6 +395,36 @@
             </objects>
             <point key="canvasLocation" x="6990" y="-761"/>
         </scene>
+        <!--Zoo Animals List Controller-->
+        <scene sceneID="qt5-EI-bmB">
+            <objects>
+                <viewController storyboardIdentifier="ZooAnimalsListController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ROU-c0-Zd4" customClass="ZooAnimalsListController" customModule="ZooApp_by_Samaya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9T1-gR-KEB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Sik-g3-OJJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZD-WN-yId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7915" y="-761"/>
+        </scene>
+        <!--Zoo Animals Details Controller-->
+        <scene sceneID="X8G-Ud-ELj">
+            <objects>
+                <viewController storyboardIdentifier="ZooAnimalsDetailsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M5B-yL-Pr2" customClass="ZooAnimalsDetailsController" customModule="ZooApp_by_Samaya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rOz-1j-fus">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fsZ-Zx-2wL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGm-ut-YoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8778" y="-761"/>
+        </scene>
         <!--Zoo Info Controller-->
         <scene sceneID="w2B-Cm-42J">
             <objects>
@@ -601,7 +631,7 @@
                                     <outlet property="delegate" destination="wWV-5L-wiA" id="l42-La-JtO"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animlas Classes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chk-bF-a4p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals Classes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chk-bF-a4p">
                                 <rect key="frame" x="90.666666666666686" y="191" width="212" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -701,16 +731,83 @@
             </objects>
             <point key="canvasLocation" x="8814.5038167938928" y="-51.408450704225352"/>
         </scene>
-        <!--View Controller-->
+        <!--Category Animals Controller-->
         <scene sceneID="EFN-tS-tnK">
             <objects>
-                <viewController id="S9l-BH-yDR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryAnimalsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S9l-BH-yDR" customClass="CategoryAnimalsController" customModule="ZooApp_by_Samaya" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N88-a5-Q1N">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXI-BM-IX1">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="183"/>
+                                <color key="backgroundColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="dQT-PD-KYx"/>
+                                    <constraint firstAttribute="height" constant="183" id="gS2-UP-Bij"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ii1-Nj-FzZ">
+                                <rect key="frame" x="0.0" y="193" width="393" height="625"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KbF-cf-688">
+                                        <rect key="frame" x="31.666666666666657" y="15" width="330" height="239"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="330" id="20H-6C-yKL"/>
+                                            <constraint firstAttribute="height" constant="239" id="WHg-qo-ptn"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VyW-Zd-suq">
+                                        <rect key="frame" x="31" y="259" width="331" height="366"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.043137254899999998" green="0.43921568630000002" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="VyW-Zd-suq" firstAttribute="leading" secondItem="Ii1-Nj-FzZ" secondAttribute="leading" constant="31" id="HKa-ui-5ES"/>
+                                    <constraint firstAttribute="trailing" secondItem="VyW-Zd-suq" secondAttribute="trailing" constant="31" id="Hhu-rN-udG"/>
+                                    <constraint firstAttribute="bottom" secondItem="VyW-Zd-suq" secondAttribute="bottom" id="NrK-pC-a0c"/>
+                                    <constraint firstItem="VyW-Zd-suq" firstAttribute="top" secondItem="KbF-cf-688" secondAttribute="bottom" constant="5" id="TVj-ga-pgT"/>
+                                    <constraint firstItem="KbF-cf-688" firstAttribute="centerX" secondItem="Ii1-Nj-FzZ" secondAttribute="centerX" id="i6I-Nu-ujO"/>
+                                    <constraint firstItem="KbF-cf-688" firstAttribute="top" secondItem="Ii1-Nj-FzZ" secondAttribute="top" constant="15" id="zqD-Ht-Ts4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1M5-lS-Iad"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ii1-Nj-FzZ" firstAttribute="bottom" secondItem="1M5-lS-Iad" secondAttribute="bottom" id="In0-rx-V10"/>
+                            <constraint firstItem="Ii1-Nj-FzZ" firstAttribute="leading" secondItem="1M5-lS-Iad" secondAttribute="leading" id="Yxw-ZO-Zo1"/>
+                            <constraint firstItem="Ii1-Nj-FzZ" firstAttribute="trailing" secondItem="1M5-lS-Iad" secondAttribute="trailing" id="Zsf-Mm-aSc"/>
+                            <constraint firstItem="sXI-BM-IX1" firstAttribute="leading" secondItem="1M5-lS-Iad" secondAttribute="leading" id="eIF-io-Ife"/>
+                            <constraint firstItem="Ii1-Nj-FzZ" firstAttribute="top" secondItem="sXI-BM-IX1" secondAttribute="bottom" constant="10" id="he2-0H-oHS"/>
+                            <constraint firstItem="sXI-BM-IX1" firstAttribute="top" secondItem="N88-a5-Q1N" secondAttribute="top" id="up6-s6-UfA"/>
+                            <constraint firstItem="sXI-BM-IX1" firstAttribute="trailing" secondItem="1M5-lS-Iad" secondAttribute="trailing" id="xoT-xA-b9e"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animalsImage" destination="KbF-cf-688" id="EJK-1D-XFo"/>
+                        <outlet property="infoText" destination="VyW-Zd-suq" id="YhS-6b-z6A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPt-x8-aAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
