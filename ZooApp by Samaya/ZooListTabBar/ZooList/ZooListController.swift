@@ -22,7 +22,8 @@ class ZooListController: UIViewController {
     var zoo = [ZooInfo]()
     var zooEmpty: [ZooInfo] = []
     var isGrid = false
-    var animalsList = [Category]()
+    var animalsList = [Animals]()
+    var animals = [Animals]()
     
     
     override func viewDidLoad() {
@@ -30,7 +31,7 @@ class ZooListController: UIViewController {
         data.getFilePath()
         fetchItems()
         CellRegistration()
-        
+        fetchCategory()
         
     }
     
@@ -71,9 +72,13 @@ extension ZooListController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "ZooAnimalsListController") as! ZooAnimalsListController
-//        controller.animalsList = animalsList
-        navigationController?.show(controller, sender: nil)
+        let selectedZoo = zooImage[indexPath.item]
+          let selectedZooAnimals = animals.filter { $0.ZooName == selectedZoo.name }
+          
+          let controller = storyboard?.instantiateViewController(withIdentifier: "ZooAnimalsListController") as! ZooAnimalsListController
+          controller.animals = selectedZooAnimals
+          navigationController?.pushViewController(controller, animated: true)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -114,6 +119,13 @@ extension ZooListController {
         let data = realm.objects(ZooInfo.self)
         zoo.append(contentsOf: data)
         zooImage = zoo
+        zooListCollection.reloadData()
+    }
+    
+    func fetchCategory(){
+        animalsList.removeAll()
+        let data = realm.objects(Animals.self)
+        animals.append(contentsOf: data)
         zooListCollection.reloadData()
     }
     

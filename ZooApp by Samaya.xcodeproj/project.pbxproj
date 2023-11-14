@@ -21,6 +21,8 @@
 		25C399E32B02669A00D8F65E /* CategoryAnimalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C399E22B02669A00D8F65E /* CategoryAnimalsController.swift */; };
 		25C399E92B0283A800D8F65E /* ZooAnimalsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C399E82B0283A800D8F65E /* ZooAnimalsListController.swift */; };
 		25C399EB2B0283E200D8F65E /* ZooAnimalsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C399EA2B0283E200D8F65E /* ZooAnimalsDetailsController.swift */; };
+		25C399F02B037AAF00D8F65E /* ZooAnimalsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C399EE2B037AAF00D8F65E /* ZooAnimalsListCell.swift */; };
+		25C399F12B037AAF00D8F65E /* ZooAnimalsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25C399EF2B037AAF00D8F65E /* ZooAnimalsListCell.xib */; };
 		25EE25ED2AF7C8B700139C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EE25EC2AF7C8B700139C6E /* AppDelegate.swift */; };
 		25EE25EF2AF7C8B700139C6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EE25EE2AF7C8B700139C6E /* SceneDelegate.swift */; };
 		25EE25F42AF7C8B700139C6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25EE25F22AF7C8B700139C6E /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		25C399E22B02669A00D8F65E /* CategoryAnimalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAnimalsController.swift; sourceTree = "<group>"; };
 		25C399E82B0283A800D8F65E /* ZooAnimalsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimalsListController.swift; sourceTree = "<group>"; };
 		25C399EA2B0283E200D8F65E /* ZooAnimalsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimalsDetailsController.swift; sourceTree = "<group>"; };
+		25C399EE2B037AAF00D8F65E /* ZooAnimalsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimalsListCell.swift; sourceTree = "<group>"; };
+		25C399EF2B037AAF00D8F65E /* ZooAnimalsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZooAnimalsListCell.xib; sourceTree = "<group>"; };
 		25EE25E92AF7C8B700139C6E /* ZooApp by Samaya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZooApp by Samaya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25EE25EC2AF7C8B700139C6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25EE25EE2AF7C8B700139C6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				25C399E82B0283A800D8F65E /* ZooAnimalsListController.swift */,
+				25C399F22B037ABB00D8F65E /* ZooAnimalsListCell */,
 			);
 			path = ZooAnimalsList;
 			sourceTree = "<group>";
@@ -211,6 +216,15 @@
 				25C399EA2B0283E200D8F65E /* ZooAnimalsDetailsController.swift */,
 			);
 			path = ZooAnimalsDetails;
+			sourceTree = "<group>";
+		};
+		25C399F22B037ABB00D8F65E /* ZooAnimalsListCell */ = {
+			isa = PBXGroup;
+			children = (
+				25C399EE2B037AAF00D8F65E /* ZooAnimalsListCell.swift */,
+				25C399EF2B037AAF00D8F65E /* ZooAnimalsListCell.xib */,
+			);
+			path = ZooAnimalsListCell;
 			sourceTree = "<group>";
 		};
 		25EE25E02AF7C8B700139C6E = {
@@ -359,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25C399F12B037AAF00D8F65E /* ZooAnimalsListCell.xib in Resources */,
 				2563B1ED2AFA7B68006BEAE5 /* ZooListCell.xib in Resources */,
 				25EE25FC2AF7C8BB00139C6E /* LaunchScreen.storyboard in Resources */,
 				2563B1F42AFA7CE3006BEAE5 /* AnimalCategoryCell.xib in Resources */,
@@ -390,6 +405,7 @@
 				25F44C002AFD176B00A9078A /* AnimalsCategoryListCell.swift in Sources */,
 				2563B1F72AFA80E0006BEAE5 /* AnimalsCategoryController.swift in Sources */,
 				25EE25EF2AF7C8B700139C6E /* SceneDelegate.swift in Sources */,
+				25C399F02B037AAF00D8F65E /* ZooAnimalsListCell.swift in Sources */,
 				25F44BF92AFBC1E600A9078A /* ZooInfoController.swift in Sources */,
 				2563B1F32AFA7CE3006BEAE5 /* AnimalCategoryCell.swift in Sources */,
 				2563B1E32AFA385A006BEAE5 /* RegisterController.swift in Sources */,
