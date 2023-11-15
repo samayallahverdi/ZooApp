@@ -20,15 +20,33 @@ class ZooListCell: UICollectionViewCell {
     
     var delegate: ZooListCellDelegate?
     
+    var isButtonTapped = true {
+            didSet {
+                updateButtonAppearance()
+            }
+        }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         zooImage.contentMode = .scaleAspectFill
                 zooImage.clipsToBounds = true
-        
+    
     }
+    func updateButtonAppearance() {
+          if !isButtonTapped {
+             
+              favoriteButoon.backgroundColor = UIColor.yellow
+          } else {
+              
+              favoriteButoon.backgroundColor = UIColor.clear
+          }
+      }
 
     @IBAction func saveButtonTapped(_ sender: Any) {
+        isButtonTapped.toggle()
         delegate?.didTapSaveButton(index: self.tag)
+        print(self.tag)
+        
     }
 }

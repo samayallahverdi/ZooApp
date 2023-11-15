@@ -15,6 +15,7 @@ class ZooInfoController: UIViewController {
     @IBOutlet weak var zooInfoCollection: UICollectionView!
     
     let realm = try! Realm()
+    var helper = DataBase()
     var zooInfo = [ZooInfo]()
     var zooOriginal = [ZooInfo]()
     var zooEmpty: [ZooInfo] = []
@@ -22,11 +23,10 @@ class ZooInfoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchItems()
-        CellRegistration()
+        helper.registerCell(nibName: "ZooInfoCell", forCellWithReuseIdentifier: "ZooInfoCell", in: zooInfoCollection)
         
     }
     
-
     @IBAction func searchButton(_ sender: Any) {
         let searchText = searchTextField.text ?? ""
         if searchText.isEmpty {
@@ -66,9 +66,5 @@ extension ZooInfoController {
         zooInfo = zooOriginal
         zooInfoCollection.reloadData()
     }
-    
-    func CellRegistration() {
-        zooInfoCollection.register(UINib(nibName: "ZooInfoCell", bundle: nil), forCellWithReuseIdentifier: "ZooInfoCell")
-        
-    }
+  
 }

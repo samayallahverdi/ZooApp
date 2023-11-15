@@ -16,12 +16,9 @@ class ZooAnimalsDetailsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(details ?? "")
-        
+ 
         animalsImage.image = UIImage(named: details?.image ?? "")
         infoTextView.text = details?.info ?? ""
+        title = details?.AnimalsName ?? ""
     }
-    
-
-  
 }

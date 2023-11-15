@@ -16,5 +16,8 @@ class AnimalsCategoryListCell: UICollectionViewCell {
         super.awakeFromNib()
         
     }
-
+    func cellConfig(image: String, name: String){
+        animalsListName.text = name
+        animalsListImage.image = UIImage(named: image)
+    }
 }

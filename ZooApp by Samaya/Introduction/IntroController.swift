@@ -16,7 +16,6 @@ class IntroController: UIViewController {
     }
     
     @IBAction func getStartButtonClicked(_ sender: Any) {
-        
         let controller = storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LoginController
         navigationController?.show(controller, sender: nil)
         

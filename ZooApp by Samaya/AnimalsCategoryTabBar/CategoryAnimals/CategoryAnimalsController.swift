@@ -8,7 +8,7 @@
 import UIKit
 
 class CategoryAnimalsController: UIViewController {
-
+    
     @IBOutlet weak var infoText: UITextView!
     @IBOutlet weak var animalsImage: UIImageView!
     
@@ -16,10 +16,8 @@ class CategoryAnimalsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(animalsInfo ?? "")
         infoText.text = animalsInfo?.animalsInfo ?? ""
         animalsImage.image = UIImage(named: animalsInfo?.animalsImage ?? "")
         title = animalsInfo?.animalName
     }
-    
 }

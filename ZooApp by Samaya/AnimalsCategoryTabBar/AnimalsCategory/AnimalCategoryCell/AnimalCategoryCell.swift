@@ -14,9 +14,11 @@ class AnimalCategoryCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         animalsNameLabel.layer.cornerRadius = 10
         animalsNameLabel.layer.masksToBounds = true
     }
-   
+    func cellConfig(image: String, name: String){
+        animalsNameLabel.text = name
+        animalsImage.image = UIImage(named: image)
+    }
 }

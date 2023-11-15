@@ -17,20 +17,21 @@ class ZooListController: UIViewController {
     @IBOutlet weak var layoutChangeButton: UIButton!
     
     let realm = try! Realm()
-    var data = DataBase()
+    var helper = DataBase()
     var zooImage = [ZooInfo]()
     var zoo = [ZooInfo]()
     var zooEmpty: [ZooInfo] = []
     var isGrid = false
     var animalsList = [Animals]()
     var animals = [Animals]()
+    var isButtonTapped = false
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        data.getFilePath()
+        helper.getFilePath()
         fetchItems()
-        CellRegistration()
+        helper.registerCell(nibName: "ZooListCell", forCellWithReuseIdentifier: "ZooListCell", in: zooListCollection)
         fetchCategory()
         
     }
@@ -54,8 +55,6 @@ class ZooListController: UIViewController {
     }
 }
 
-
-
 extension ZooListController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -66,18 +65,30 @@ extension ZooListController: UICollectionViewDataSource, UICollectionViewDelegat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZooListCell", for: indexPath) as! ZooListCell
         cell.zooImage.image = UIImage(named: zooImage[indexPath.item].image ?? "")
         cell.zooName.text = zooImage[indexPath.item].name
-        
+        cell.tag = indexPath.item
         cell.delegate = self
+        
+        if let selectedAnimalName = zooImage[indexPath.item].name,
+              realm.objects(MyFavorites.self).filter("zoo = %@", selectedAnimalName).first != nil {
+               cell.isButtonTapped = false
+           }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedZoo = zooImage[indexPath.item]
-          let selectedZooAnimals = animals.filter { $0.ZooName == selectedZoo.name }
-          
-          let controller = storyboard?.instantiateViewController(withIdentifier: "ZooAnimalsListController") as! ZooAnimalsListController
-          controller.animals = selectedZooAnimals
-          navigationController?.pushViewController(controller, animated: true)
+        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ZooAnimalsListController") as! ZooAnimalsListController
+        
+        
+        var tempAnimals = [Animals]()
+        for animal in animals {
+            
+            if zooImage[indexPath.item].name ==  animal.ZooName {
+                tempAnimals.append(animal)
+            }
+        }
+        controller.animals = tempAnimals
+        navigationController?.show(controller, sender: nil)
         
     }
     
@@ -97,21 +108,25 @@ extension ZooListController: UICollectionViewDataSource, UICollectionViewDelegat
 extension ZooListController: ZooListCellDelegate {
     
     func didTapSaveButton(index: Int) {
-        let selectedZoo = zooImage[index]
+        let selectedZooInfo = zooImage[index].name
         
-        if let existingFavorite = realm.objects(MyFavorites.self).filter("zoo = %@", selectedZoo.name ?? "").first {
-            try! realm.write {
-                realm.delete(existingFavorite)
+        if let selectedZooName = selectedZooInfo {
+            
+            if let existingFavorite = realm.objects(MyFavorites.self).filter("zoo = %@", selectedZooName).first {
+                try! realm.write {
+                    realm.delete(existingFavorite)
+                }
+            } else {
+                let newFavorite = MyFavorites()
+                newFavorite.zoo = selectedZooName
+                try! realm.write {
+                    realm.add(newFavorite)
+                    
+                }
             }
-        } else {
-            let newFavorite = MyFavorites()
-            newFavorite.zoo = selectedZoo.name
-            try! realm.write {
-                realm.add(newFavorite)
-            }
+            
         }
     }
-    
 }
 extension ZooListController {
     func fetchItems() {
@@ -129,10 +144,6 @@ extension ZooListController {
         zooListCollection.reloadData()
     }
     
-    func CellRegistration() {
-        zooListCollection.register(UINib(nibName: "ZooListCell", bundle: nil), forCellWithReuseIdentifier: "ZooListCell")
-        
-    }
     func updateButtonAppearance() {
         if isGrid {
             layoutChangeButton.setImage(UIImage(systemName: "list.triangle"), for: .normal)
@@ -141,4 +152,5 @@ extension ZooListController {
             
         }
     }
+    
 }
