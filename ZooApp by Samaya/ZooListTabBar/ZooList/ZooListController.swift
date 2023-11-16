@@ -69,9 +69,9 @@ extension ZooListController: UICollectionViewDataSource, UICollectionViewDelegat
         cell.delegate = self
         
         if let selectedAnimalName = zooImage[indexPath.item].name,
-              realm.objects(MyFavorites.self).filter("zoo = %@", selectedAnimalName).first != nil {
-               cell.isButtonTapped = false
-           }
+           realm.objects(MyFavorites.self).filter("zoo = %@", selectedAnimalName).first != nil {
+            cell.isButtonTapped = false
+        }
         return cell
     }
     
@@ -88,6 +88,7 @@ extension ZooListController: UICollectionViewDataSource, UICollectionViewDelegat
             }
         }
         controller.animals = tempAnimals
+        controller.transferredZooName = zooImage[indexPath.item].name
         navigationController?.show(controller, sender: nil)
         
     }

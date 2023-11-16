@@ -17,10 +17,14 @@ class ZooAnimalsListController: UIViewController {
     let realm = try! Realm()
     var animals: [Animals] = []
     var animalsList = [Animals]()
+    var transferredZooName : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         helper.registerCell(nibName: "ZooAnimalsListCell", forCellWithReuseIdentifier: "ZooAnimalsListCell", in: animalsListCollection)
+        print(animalsList)
+        print("fetchi isleyr qaqa??")
+        fetchItems()
     }
     
     @IBAction func searchButton(_ sender: Any) {
@@ -48,9 +52,9 @@ extension ZooAnimalsListController: UICollectionViewDataSource, UICollectionView
         cell.tag = indexPath.item
         
         if let selectedAnimalName = animals[indexPath.item].AnimalsName,
-              realm.objects(MyFavorites.self).filter("animals = %@", selectedAnimalName).first != nil {
-               cell.isButtonTapped = false
-           }
+           realm.objects(MyFavorites.self).filter("animals = %@", selectedAnimalName).first != nil {
+            cell.isButtonTapped = false
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -83,3 +87,21 @@ extension ZooAnimalsListController: ZooAnimalsListCellDelegate {
     }
     
 }
+extension ZooAnimalsListController {
+    func fetchItems() {
+        let allAnimals = realm.objects(Animals.self)
+        if !allAnimals.isEmpty {
+            animalsList = Array(allAnimals)
+        }
+        animalsList.removeAll()
+        
+        for animal in allAnimals {
+            if animal.ZooName == transferredZooName {
+                animalsList.append(animal)
+            }
+        }
+        
+        animalsListCollection.reloadData()
+    }
+}
+ 
