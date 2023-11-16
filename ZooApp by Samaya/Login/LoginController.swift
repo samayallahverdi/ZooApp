@@ -32,7 +32,6 @@ class LoginController: UIViewController {
         }
         
         let user = realm.objects(User.self).filter("email == %@ AND password == %@", email, password).first
-        
         if user != nil {
             
             UserDefaults.standard.setValue(true, forKey: "isLogged")
@@ -42,15 +41,12 @@ class LoginController: UIViewController {
         } else {
             showLoginAlert(message: "Invalid credentials")
         }
-        
-       
     }
     
     @IBAction func signUpButtonClicked(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
         navigationController?.show(controller, sender: nil)
     }
-    
 }
 extension LoginController {
     func showLoginAlert(message: String) {

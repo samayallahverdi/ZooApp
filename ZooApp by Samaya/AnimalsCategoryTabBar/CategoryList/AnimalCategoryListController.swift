@@ -20,7 +20,7 @@ class AnimalCategoryListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         helper.registerCell(nibName: "AnimalsCategoryListCell", forCellWithReuseIdentifier: "AnimalsCategoryListCell", in: listCollection)
-       
+        
     }
 }
 extension AnimalCategoryListController: UICollectionViewDataSource, UICollectionViewDelegate {
