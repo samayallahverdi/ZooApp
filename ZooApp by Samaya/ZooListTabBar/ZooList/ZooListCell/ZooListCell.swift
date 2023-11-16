@@ -35,11 +35,10 @@ class ZooListCell: UICollectionViewCell {
     }
     func updateButtonAppearance() {
           if !isButtonTapped {
-             
-              favoriteButoon.backgroundColor = UIColor.yellow
+              favoriteButoon.setImage(UIImage(systemName: "star.fill"), for: .normal)
           } else {
               
-              favoriteButoon.backgroundColor = UIColor.clear
+              favoriteButoon.setImage(UIImage(systemName: "star"), for: .normal)
           }
       }
 

@@ -26,7 +26,6 @@ class RegisterController: UIViewController {
         helper.getFilePath()
     }
     
-    
     @IBAction func registerButtonClicked(_ sender: Any) {
         
         guard let name = nameField.text, !name.isEmpty,
@@ -47,8 +46,6 @@ class RegisterController: UIViewController {
                 return
             }
 
-        
-        
         // User adding
         let success = addUserToRealm(name: name, email: email, birthdate: birthdate, phoneNumber: phoneNumber, password: password)
         
@@ -57,12 +54,9 @@ class RegisterController: UIViewController {
             let controller = storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LoginController
             navigationController?.show(controller, sender: nil)
         } else {
-            
             print("error")
         }
-        
     }
-    
 }
 extension RegisterController {
     
@@ -72,11 +66,9 @@ extension RegisterController {
         alertController.addAction(okButton)
         present(alertController, animated: true)
         
-        
     }
     
     func addUserToRealm(name: String, email: String, birthdate: String, phoneNumber: String, password: String) -> Bool {
-        
         
         newUser.name = name
         newUser.email = email

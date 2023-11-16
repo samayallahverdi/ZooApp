@@ -40,11 +40,11 @@ class ZooAnimalsListCell: UICollectionViewCell {
     }
     func updateButtonAppearance() {
         if !isButtonTapped {
-            
-            saveButton.backgroundColor = UIColor.yellow
+            saveButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+           
         } else {
             
-            saveButton.backgroundColor = UIColor.clear
+            saveButton.setImage(UIImage(systemName: "star"), for: .normal)
         }
     }
 }
