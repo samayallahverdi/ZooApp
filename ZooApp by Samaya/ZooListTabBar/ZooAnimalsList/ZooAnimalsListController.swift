@@ -22,8 +22,6 @@ class ZooAnimalsListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         helper.registerCell(nibName: "ZooAnimalsListCell", forCellWithReuseIdentifier: "ZooAnimalsListCell", in: animalsListCollection)
-        print(animalsList)
-        print("fetchi isleyr qaqa??")
         fetchItems()
     }
     
