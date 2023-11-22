@@ -18,12 +18,12 @@ class RegisterController: UIViewController {
     
     let realm = try! Realm()
     let newUser = User()
-    var helper = DataBase()
+    var DB = DataBase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        helper.getFilePath()
+        DB.getFilePath()
     }
     
     @IBAction func registerButtonClicked(_ sender: Any) {

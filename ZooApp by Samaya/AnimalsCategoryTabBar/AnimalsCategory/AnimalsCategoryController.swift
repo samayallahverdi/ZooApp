@@ -17,7 +17,7 @@ class AnimalsCategoryController: UIViewController {
     
     
     let realm = try! Realm()
-    var helper = DataBase()
+    var helper = Helper()
     var animalsCategory = [Category]()
     var animalOnlyCategory = [String]()
     var category = [Category]()

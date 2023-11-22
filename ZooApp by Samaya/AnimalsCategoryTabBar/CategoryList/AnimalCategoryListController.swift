@@ -14,7 +14,7 @@ class AnimalCategoryListController: UIViewController {
     @IBOutlet weak var listCollection: UICollectionView!
     
     let realm = try! Realm()
-    var helper = DataBase()
+    var helper = Helper()
     var animalsInCategory = [Category]()
     
     override func viewDidLoad() {

@@ -13,7 +13,7 @@ class ZooAnimalsListController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var animalsListCollection: UICollectionView!
     
-    var helper = DataBase()
+    var helper = Helper()
     let realm = try! Realm()
     var animals: [Animals] = []
     var animalsList = [Animals]()

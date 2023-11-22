@@ -15,7 +15,7 @@ class ZooInfoController: UIViewController {
     @IBOutlet weak var zooInfoCollection: UICollectionView!
     
     let realm = try! Realm()
-    var helper = DataBase()
+    var helper = Helper()
     var zooInfo = [ZooInfo]()
     var zooOriginal = [ZooInfo]()
     var zooEmpty: [ZooInfo] = []

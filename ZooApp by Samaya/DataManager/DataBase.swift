@@ -16,8 +16,6 @@ class DataBase {
             print(url)
         }
     }
-     func registerCell(nibName: String, forCellWithReuseIdentifier identifier: String, in collectionView: UICollectionView){
-    collectionView.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: identifier)
-}
+    
 }
 

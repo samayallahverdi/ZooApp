@@ -21,17 +21,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if (UserDefaults.standard.bool(forKey: "isLogged")) {
             window = UIWindow(windowScene: windowScene)
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+            self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
             
 
-            window?.rootViewController = UINavigationController(rootViewController: controller)
-            window?.makeKeyAndVisible()
+//            window?.rootViewController = UINavigationController(rootViewController: controller)
+            self.window?.makeKeyAndVisible()
         } else {
             window = UIWindow(windowScene: windowScene)
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as! LoginController
+            self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as! UINavigationController
             UserDefaults.standard.setValue(false, forKey: "isLogged")
-            window?.rootViewController = UINavigationController(rootViewController: controller)
-            window?.makeKeyAndVisible()
+//            window?.rootViewController = UINavigationController(rootViewController: controller)
+            self.window?.makeKeyAndVisible()
             
         }
         

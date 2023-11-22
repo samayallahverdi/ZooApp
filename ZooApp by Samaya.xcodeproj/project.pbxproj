@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252A73972B0E25310003F0AA /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A73962B0E25310003F0AA /* Helper.swift */; };
 		2563B1E32AFA385A006BEAE5 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2563B1E22AFA385A006BEAE5 /* RegisterController.swift */; };
 		2563B1E72AFA4AB8006BEAE5 /* ZooListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2563B1E62AFA4AB8006BEAE5 /* ZooListController.swift */; };
 		2563B1E92AFA75B8006BEAE5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2563B1E82AFA75B8006BEAE5 /* TabBarController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		252A73962B0E25310003F0AA /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		2563B1E22AFA385A006BEAE5 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		2563B1E62AFA4AB8006BEAE5 /* ZooListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooListController.swift; sourceTree = "<group>"; };
 		2563B1E82AFA75B8006BEAE5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				25EE260C2AF7CD6600139C6E /* Model.swift */,
+				252A73962B0E25310003F0AA /* Helper.swift */,
 				25EE260E2AF7CD7200139C6E /* DataBase.swift */,
 			);
 			path = DataManager;
@@ -402,6 +405,7 @@
 				2563B1EC2AFA7B68006BEAE5 /* ZooListCell.swift in Sources */,
 				25C399EB2B0283E200D8F65E /* ZooAnimalsDetailsController.swift in Sources */,
 				2563B1E72AFA4AB8006BEAE5 /* ZooListController.swift in Sources */,
+				252A73972B0E25310003F0AA /* Helper.swift in Sources */,
 				25F44C002AFD176B00A9078A /* AnimalsCategoryListCell.swift in Sources */,
 				2563B1F72AFA80E0006BEAE5 /* AnimalsCategoryController.swift in Sources */,
 				25EE25EF2AF7C8B700139C6E /* SceneDelegate.swift in Sources */,

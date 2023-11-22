@@ -17,7 +17,7 @@ class ZooListController: UIViewController {
     @IBOutlet weak var layoutChangeButton: UIButton!
     
     let realm = try! Realm()
-    var helper = DataBase()
+    var DB = DataBase()
     var zooImage = [ZooInfo]()
     var zoo = [ZooInfo]()
     var zooEmpty: [ZooInfo] = []
@@ -25,14 +25,16 @@ class ZooListController: UIViewController {
     var animalsList = [Animals]()
     var animals = [Animals]()
     var isButtonTapped = false
+    var helper = Helper()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        helper.getFilePath()
+        DB.getFilePath()
         fetchItems()
         helper.registerCell(nibName: "ZooListCell", forCellWithReuseIdentifier: "ZooListCell", in: zooListCollection)
         fetchCategory()
+      
         
     }
     

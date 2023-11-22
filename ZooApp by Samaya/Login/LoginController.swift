@@ -15,12 +15,12 @@ class LoginController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     let realm = try! Realm()
-    let helper = DataBase()
+    let DB = DataBase()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        helper.getFilePath()
+        DB.getFilePath()
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
